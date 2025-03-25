@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [groupCode, setGroupCode] = useState("");
-  const [error, setError] = useState<string | null>(null);
+  //   const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -12,10 +13,10 @@ const Login = () => {
   };
 
   return (
-    <div className="text-3xl font-bold underline">
-      <h2>Login</h2>
+    <div className="text-center">
+      <h2 className="text-3xl font-bold p-3">Login</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="p-px">
           <label>Username:</label>
           <input
             type="text"
@@ -24,7 +25,7 @@ const Login = () => {
             required
           />
         </div>
-        <div>
+        <div className="p-px">
           <label>Password:</label>
           <input
             type="password"
@@ -33,7 +34,7 @@ const Login = () => {
             required
           />
         </div>
-        <div>
+        <div className="p-px">
           <label>Group Code:</label>
           <input
             type="text"
@@ -42,8 +43,11 @@ const Login = () => {
             required
           />
         </div>
-        <button type="submit">Login</button>
+        <div className="p-3">
+          <button type="submit">Login</button>
+        </div>
       </form>
+      <Link to={"./Register"}>New User? Register Here!</Link>
     </div>
   );
 };
