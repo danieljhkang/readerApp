@@ -66,7 +66,7 @@ const Register = () => {
         </form>
         <p className="text-center mt-4">
           Already have an account?
-          <Link to="/" className="hover:underline ml-1">
+          <Link to="/signin" className="hover:underline ml-1">
             Log in Here!
           </Link>
         </p>

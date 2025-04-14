@@ -2,16 +2,17 @@
 // import Login from "./pages/Login";
 // import Register from "./pages/Register";
 // import supabase from "./supabase-client";
+import { Link } from "react-router-dom";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      {/* <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-      </Routes> */}
+    <div className="text-center p-4">
+      <p>Welcome to the Bible Reading Challenge Website</p>
+      <Link to={"/signup"}>New User? Register Here!</Link>
+      <br />
+      <Link to={"/signin"}>Returning User? Log In Here!</Link>
     </div>
   );
 }

@@ -37,7 +37,7 @@ const Login = () => {
           <button type="submit">Login</button>
         </div>
       </form>
-      <Link to={"./Register"}>New User? Register Here!</Link>
+      <Link to={"/signup"}>New User? Register Here!</Link>
     </div>
   );
 };
