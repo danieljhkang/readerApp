@@ -1,12 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-// const { data, error } = await supabase.auth.signUp({
-//   email: "example@email.com",
-//   password: "example-password",
-//   code: "ABCDEFG",
-// });
-
 const Register = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -22,11 +16,6 @@ const Register = () => {
       password,
     });
   };
-
-  // const { data, error } = await supabase.auth.signUp({
-  //   email: "example@email.com",
-  //   password: "example-password",
-  // });
 
   return (
     <div className="flex justify-center items-center min-h-screen">
