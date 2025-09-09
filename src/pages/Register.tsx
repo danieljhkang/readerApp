@@ -18,7 +18,7 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex justify-center items-center">
       <div className="shadow-lg rounded-lg p-8 w-full max-w-md">
         <h2 className="text-3xl font-bold text-center mb-6">New User Signup</h2>
         <form className="space-y-4">
@@ -46,6 +46,12 @@ const Register = () => {
             type="password"
             required
           />
+          <input
+            className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2"
+            placeholder="Church Code"
+            type="text"
+            required
+          />
           <button
             type="submit"
             className="w-full p-3 rounded-lg hover:bg-gray-200 transition"
@@ -55,7 +61,7 @@ const Register = () => {
         </form>
         <p className="text-center mt-4">
           Already have an account?
-          <Link to="/signin" className="hover:underline ml-1">
+          <Link to="/" className="hover:underline ml-1">
             Log in Here!
           </Link>
         </p>

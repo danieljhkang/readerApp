@@ -8,7 +8,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <>
-    <h1 className="text-center pt-4 text-3xl">Bible Reading Challenge</h1>
+    <h1 className="text-4xl font-semibold text-center mt-6 mb-4">
+      Bible Reading Challenge
+    </h1>
     <RouterProvider router={router} />
   </>
 );

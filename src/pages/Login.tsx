@@ -12,33 +12,39 @@ const Login = () => {
   };
 
   return (
-    <div className="text-center">
-      <h2 className="text-3xl font-bold p-3">Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="p-px">
-          <label>Username:</label>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
+    <div className="flex justify-center items-center">
+      <div className="shadow-lg rounded-lg p-8 w-full max-w-md">
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-center mb-6">Login</h2>
+          <form className="space-y-4" onSubmit={handleSubmit}>
+            <div className="p-px">
+              <input
+                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2"
+                placeholder="Email"
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                required
+              />
+            </div>
+            <div className="p-px">
+              <input
+                className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2"
+                placeholder="Password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <div className="p-3">
+              <button type="submit">Login</button>
+            </div>
+          </form>
+          <br />
+          <Link to={"/signup"}>New User? Register Here!</Link>
         </div>
-        <div className="p-px">
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div className="p-3">
-          <button type="submit">Login</button>
-        </div>
-      </form>
-      <br />
-      <Link to={"/signup"}>New User? Register Here!</Link>
+      </div>
     </div>
   );
 };
